@@ -1,0 +1,40 @@
+.image{
+    width: 40px;
+}
+.container{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 1%;
+    margin: 4%;
+}
+.rightside, .leftside{
+    display: flex;
+    flex-direction: column;
+}
+.leftside :last-child{
+    color: #cccccc;
+}
+.left{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.greenPriceChange{
+    color: rgb(0, 255, 0);
+}
+.redPriceChange{
+    color: rgb(176, 0, 0);
+}
+.redBackGround{
+    width: 55%;
+    margin:0 28%;
+    background: linear-gradient(315deg, #c9040450, rgba(211,60,79,0));
+}
+.greenBackGround{
+    width: 55%;
+    margin:0 28%;
+    background: linear-gradient(90deg, rgba(211,60,79,0) , rgba(0,114,17,1) 100%, rgba(0,162,14,1) 100%);
+}
+

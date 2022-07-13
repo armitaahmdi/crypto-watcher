@@ -1,0 +1,22 @@
+.listItem{
+    list-style: none;
+}
+.listItem a{
+    color: #fff;
+    text-decoration: none;
+}
+.navbar ul{
+    padding: 0;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar{
+    top: 0;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    background: #000;
+    opacity: 0.9;
+}
