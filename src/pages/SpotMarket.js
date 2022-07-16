@@ -1,36 +1,54 @@
-import React, { useEffect, useState } from 'react';
-import Coin from '../components/Coin';
+import React, { useContext, useMemo, useState, useEffect } from 'react';
 
-//API
-import { getCoin } from '../services/api';
+// Components
+import CoinData from '../shared/CoinData';
+import ScrollToTop from '../shared/ScrollToTop';
+
+// Style
+import styles from '../styles/spotMarket.module.css'
+
+// Context
+import { DataContext } from '../contexts/DataContextProvider';
+
+// Hooks
+import Pagination from '../hooks/Pagination';
 
 const SpotMarket = () => {
 
-    const [coins, setCoins] = useState([]);
+    const coins = useContext(DataContext);
+
+    const PageSize = 50;
+    const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
-        const fetchAPI = async () => {
-            const data = await getCoin();
-            console.log(data);
-            setCoins(data)
-        }
-        fetchAPI()
-    }, [])
+        window.scrollTo({ top: 0 });
+    }, [currentPage])
+
+    const currentShowData = useMemo(() => {
+        const firsّtPageIndex = (currentPage - 1) * PageSize;
+        const lastPageIndex = firsّtPageIndex + PageSize;
+        return coins.slice(firsّtPageIndex, lastPageIndex);
+    }, [currentPage, coins])
 
     return (
-        <div>
+        <div className={styles.total}>
             {
-                coins.map(coin => <Coin
+                currentShowData.map(coin => <CoinData
                     key={coin.id}
-                    image={coin.image}
-                    symbol={coin.symbol}
-                    vol={coin.total_volume}
-                    price={coin.current_price}
-                    priceChange={coin.market_cap_change_percentage_24h}
-                    />)
+                    coinData={coin}
+                />
+                )
             }
+            <Pagination
+                currentPage={currentPage}
+                totalCount={coins.length}
+                pageSize={PageSize}
+                onPageChange={page => setCurrentPage(page)}
+            />
+            <ScrollToTop />
         </div>
     );
+
 };
 
 export default SpotMarket;
