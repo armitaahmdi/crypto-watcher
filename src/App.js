@@ -14,13 +14,36 @@ import WatchList from './pages/WatchList';
 
 // Context 
 import DataContextProvider from './contexts/DataContextProvider';
+import WatchListContextProvider from './contexts/WatchListContextProvider';
+
+// Style
+import './styles/App.css'
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
+    <div className='total'>
+      <div>
+        <Navbar />
+        <DataContextProvider>
+          <WatchListContextProvider>
+            <Routes>
+              <Route path='/About-Project' element={<AboutProject />} />
+              <Route path='/Developer' element={<Developer />} />
+              <Route path='/Spot-Market' element={<SpotMarket />} />
+              <Route path='/WatchList' element={<WatchList />} />
+              <Route path='/' element={<Navigate to='/Spot-Market' />} />
+            </Routes>
+          </WatchListContextProvider>
+        </DataContextProvider>
+      </div>
+    </div>
 
-      <Routes>
+  );
+};
+
+export default App;
+
+{/* <Routes>
         <Route path='/About-Project' element={<AboutProject />} />
         <Route path='/Developer' element={<Developer />} />
         <Route path='/Spot-Market' element={
@@ -29,21 +52,4 @@ const App = () => {
           </DataContextProvider>} />
         <Route path='/WatchList' element={<WatchList />} />
         <Route path='/' element={<Navigate to='/Spot-Market' />} />
-      </Routes>
-
-
-
-      {/* <DataContextProvider>
-          <Routes>
-            <Route path='/About-Project' element={<AboutProject />} />
-            <Route path='/Developer' element={<Developer />} />
-            <Route path='/Spot-Market' element={<SpotMarket />} />
-            <Route path='/WatchList' element={<WatchList />} />
-            <Route path='/' element={<Navigate to='/Spot-Market' />} />
-          </Routes>
-      </DataContextProvider> */}
-    </div>
-  );
-};
-
-export default App;
+      </Routes> */}

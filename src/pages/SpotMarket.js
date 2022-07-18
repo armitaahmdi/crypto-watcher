@@ -4,9 +4,6 @@ import React, { useContext, useMemo, useState, useEffect } from 'react';
 import CoinData from '../shared/CoinData';
 import ScrollToTop from '../shared/ScrollToTop';
 
-// Style
-import styles from '../styles/spotMarket.module.css'
-
 // Context
 import { DataContext } from '../contexts/DataContextProvider';
 
@@ -31,7 +28,7 @@ const SpotMarket = () => {
     }, [currentPage, coins])
 
     return (
-        <div className={styles.total}>
+        <div>
             {
                 currentShowData.map(coin => <CoinData
                     key={coin.id}
