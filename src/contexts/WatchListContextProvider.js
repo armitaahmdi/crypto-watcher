@@ -2,6 +2,12 @@ import React, { useReducer } from 'react';
 
 const initialState = {
     selectedItems: [],
+    itemsCounter: 0
+}
+
+const sumItems = items => {
+    const itemsCounter = items.reduce((total, coin) => total + coin.quantity, 0)
+    return {itemsCounter}
 }
 
 const watchReducer = (state, action) => {
@@ -11,19 +17,24 @@ const watchReducer = (state, action) => {
         case 'ADD_ITEM':
             if (!state.selectedItems.find(item => item.id === action.payload.id)) {
                 state.selectedItems.push({
-                    ...action.payload
+                    ...action.payload,
+                    quantity: 1
                 })
             }
             return {
                 ...state,
-                selectedItems: [...state.selectedItems]
+                selectedItems: [...state.selectedItems],
+                ...sumItems(state.selectedItems)
             }
         // Remove Item from WatchList
         case 'REMOVE_ITEM':
             const newSelectedItems = state.selectedItems.filter(item => item.id !== action.payload.id);
+            const index = state.selectedItems.findIndex(item => item.id === action.payload.id);
+            state.selectedItems[index].quantity--;
             return {
                 ...state,
-                selectedItems: [...newSelectedItems]
+                selectedItems: [...newSelectedItems],
+                ...sumItems(state.selectedItems)
             }
         default:
             return state;

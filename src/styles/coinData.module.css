@@ -37,7 +37,7 @@
     margin:0 25%;
     background: linear-gradient(90deg, rgba(211,60,79,0) , rgba(0,114,17,1) 100%, rgba(0,162,14,1) 100%);
 }
-.addButton{
+.Button{
     border: none;
     border: 2px solid #fff;
     cursor: pointer;
@@ -46,6 +46,6 @@
     padding: 5px 12px;
     margin-top: 5px;
 }
-.addButton:disabled{
+.Button:disabled{
     opacity: 0.6;
 }

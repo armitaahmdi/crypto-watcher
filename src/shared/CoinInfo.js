@@ -35,7 +35,7 @@ const CoinInfo = (props) => {
                     <div className={styles.rightside}>
                         <span className={market_cap_change_percentage_24h > 0 ? styles.greenPriceChange : styles.redPriceChange}> {market_cap_change_percentage_24h.toFixed(3)} % </span>
                         <span> {current_price.toLocaleString()} $ </span>
-                        <button className={styles.addButton} onClick={handleClick}
+                        <button className={styles.Button} onClick={handleClick}
                         // onClick={() => dispatch({
                         //     type: (parents_component === "spot" ? 'ADD_ITEM' : 'REMOVE_ITEM'),
                         //     payload: props.data
