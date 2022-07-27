@@ -4,7 +4,6 @@ import React from 'react';
 import CoinInfo from './CoinInfo';
 
 const CoinData = ({ coinData }) => {
-
     return (
         <CoinInfo data={coinData} parents_component="spot" />
     );

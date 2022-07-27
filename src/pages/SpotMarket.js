@@ -1,4 +1,5 @@
 import React, { useContext, useMemo, useState, useEffect } from 'react';
+import { Modal } from 'react-bootstrap'
 
 // Components
 import CoinData from '../shared/CoinData';
@@ -11,7 +12,6 @@ import { DataContext } from '../contexts/DataContextProvider';
 import Pagination from '../hooks/Pagination';
 
 const SpotMarket = () => {
-
     const coins = useContext(DataContext);
 
     const PageSize = 50;
@@ -29,6 +29,7 @@ const SpotMarket = () => {
 
     return (
         <div>
+            <div style={{marginBottom: '100px'}}>
             {
                 currentShowData.map(coin => <CoinData
                     key={coin.id}
@@ -36,6 +37,7 @@ const SpotMarket = () => {
                 />
                 )
             }
+            </div>
             <Pagination
                 currentPage={currentPage}
                 totalCount={coins.length}

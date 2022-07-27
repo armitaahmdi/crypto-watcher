@@ -1,43 +1,57 @@
-.image{
+.image {
     width: 40px;
 }
-.container{
+
+.container {
     color: #fff;
     display: flex;
     justify-content: space-between;
     padding: 2% 1%;
     margin: 4%;
 }
-.rightside, .leftside{
+
+.container:hover {
+    cursor: pointer
+}
+
+.rightside,
+.leftside {
     display: flex;
     flex-direction: column;
 }
-.leftside :last-child{
+
+.leftside :last-child {
     color: #cccccc;
 }
-.left{
+
+.left {
     width: 30%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.greenPriceChange{
-    color: rgb(0, 255, 0);
+
+.greenPriceChange {
+    color: #0C9361;
 }
-.redPriceChange{
-    color: rgb(176, 0, 0);
+
+.redPriceChange {
+    color: #cb4d5c;
 }
-.redBackGround{
+
+.redBackGround {
     width: 55%;
-    margin:0 25%;
-    background: linear-gradient(315deg, #c9040450, rgba(211,60,79,0));
+    margin: 0 21%;
+    background: linear-gradient(90deg, #0E0E0E, #3C1B1F 100%, #3C1B1F 100%);
 }
-.greenBackGround{
+
+.greenBackGround {
     width: 55%;
-    margin:0 25%;
-    background: linear-gradient(90deg, rgba(211,60,79,0) , rgba(0,114,17,1) 100%, rgba(0,162,14,1) 100%);
+    margin: 0 21%;
+    background: linear-gradient(90deg, #0E0E0E, #10261E 100%, #10261E 100%);
 }
-.Button{
+
+.Button {
     border: none;
     border: 2px solid #fff;
     cursor: pointer;
@@ -46,6 +60,7 @@
     padding: 5px 12px;
     margin-top: 5px;
 }
-.Button:disabled{
+
+.Button:disabled {
     opacity: 0.6;
 }

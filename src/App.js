@@ -11,6 +11,7 @@ import AboutProject from './pages/AboutProject'
 import Developer from './pages/Developer';
 import SpotMarket from './pages/SpotMarket';
 import WatchList from './pages/WatchList';
+import CoinDetail from './shared/CoinDetail';
 
 // Context 
 import DataContextProvider from './contexts/DataContextProvider';
@@ -32,6 +33,7 @@ const App = () => {
               <Route path='/Spot-Market' element={<SpotMarket />} />
               <Route path='/WatchList' element={<WatchList />} />
               <Route path='/' element={<Navigate to='/Spot-Market' />} />
+              <Route path='/Coin/:id' element={<CoinDetail />} />
             </Routes>
           </WatchListContextProvider>
         </DataContextProvider>

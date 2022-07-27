@@ -9,9 +9,3 @@ const getCoin = async () => {
 }
 
 export {getCoin}
-
-// import axios from 'axios';
-
-// const BASE_URL = 'https://api.coingecko.com/api/v3';
-// const axiosObj = axios.create({BASE_URL});
-// export default axiosObj;
