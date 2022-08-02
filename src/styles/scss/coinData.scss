@@ -1,0 +1,201 @@
+@import './variable';
+@import './mixin';
+
+.image {
+    width: 4vw;
+}
+
+.container {
+    color: $whiteColor;
+    display: flex;
+    justify-content: space-between;
+    // padding: 2% 1%;
+    margin: 2%;
+
+    &:hover {
+        cursor: pointer
+    }
+}
+
+.leftPart {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    div {
+        margin: 10px;
+    }
+
+    .leftside {
+        display: flex;
+        flex-direction: column;
+
+        :last-child {
+            color: #cccccc;
+        }
+    }
+}
+
+.rightside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px;
+
+    div {
+        pad: 5px;
+    }
+}
+
+
+.greenPriceChange {
+    color: $greenColor;
+}
+
+.redPriceChange {
+    color: $redColor;
+}
+
+.redBackGround {
+    background: $redGradientBackground;
+}
+
+.greenBackGround {
+    background: $greenGradientBackground;
+}
+
+.Button {
+    font-size: smaller;
+    border: none;
+    border: 1px solid $whiteColor;
+    // border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    color: $whiteColor;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100px;
+
+    &:disabled {
+        opacity: 0.6;
+    }
+}
+
+.container_show_coin_data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-bottom: 100px;
+}
+
+.container_show_coin_data>div {
+    width: 60%;
+    margin: 10px 0;
+}
+
+// 0-480
+@include media(S) {
+    .container_show_coin_data>div {
+        width: 80%;
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    .image {
+        width: 8vw;
+    }
+
+    .leftPart {
+        width: 50%;
+    }
+
+    .Button {
+        width: 60px;
+    }
+
+    .rightside span {
+        font-size: 14px;
+    }
+
+}
+
+// 480-768
+@include media(M) {
+    .container_show_coin_data>div {
+        width: 80%;
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    .image {
+        width: 6vw;
+    }
+
+    .leftPart {
+        width: 50%;
+    }
+
+    .Button {
+        width: 70px;
+    }
+
+    .rightside span {
+        font-size: 16px;
+    }
+}
+
+// 768-950
+@include media(L) {
+    .container_show_coin_data>div {
+        width: 80%;
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    .image {
+        width: 8vw;
+    }
+
+    .leftPart {
+        width: 50%;
+    }
+
+    .Button {
+        width: 90px;
+        margin: 5px 10px;
+    }
+
+    .rightside span {
+        font-size: 18px;
+    }
+}
+
+// 950-1200
+@include media(XL) {
+    .container_show_coin_data>div {
+        width: 80%;
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    .image {
+        width: 7vw;
+    }
+
+    .leftPart {
+        width: 50%;
+    }
+
+
+    .Button {
+        width: 90px;
+        margin: 5px 10px;
+    }
+
+    .rightside span {
+        font-size: 18px;
+    }
+}

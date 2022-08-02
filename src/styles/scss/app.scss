@@ -1,0 +1,23 @@
+@import './mixin';
+
+.total {
+    margin-top: 10%;
+}
+
+@include media(S) {
+    .total {
+        margin-top: 25%;
+    }
+}
+
+@include media(M) {
+    .total {
+        margin-top: 18%;
+    }
+}
+
+@include media(L) {
+    .total {
+        margin-top: 10%;
+    }
+}

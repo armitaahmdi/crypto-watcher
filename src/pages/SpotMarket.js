@@ -29,14 +29,14 @@ const SpotMarket = () => {
 
     return (
         <div>
-            <div style={{marginBottom: '100px'}}>
-            {
-                currentShowData.map(coin => <CoinData
-                    key={coin.id}
-                    coinData={coin}
-                />
-                )
-            }
+            <div className='container_show_coin_data'>
+                {
+                    currentShowData.map(coin => <CoinData
+                        key={coin.id}
+                        coinData={coin}
+                    />
+                    )
+                }
             </div>
             <Pagination
                 currentPage={currentPage}

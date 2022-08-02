@@ -1,0 +1,144 @@
+@import './variable';
+@import './mixin';
+
+.box_container {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 21;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.box_details {
+    width: 60%;
+    height: 340px;
+    background-color: $blackColor;
+    color: $whiteColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px solid transparent;
+    border-radius: 20px 20px 0 0;
+    background:
+        linear-gradient(1deg, $blackColor, #151419),
+        linear-gradient(to right, #DD5A44, #B842B5);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+
+    .fw-bolder {
+        font-weight: $bolderFontWeight;
+    }
+
+    .fw-lighter {
+        font-weight: $lightFontWeight;
+    }
+}
+
+.middle_table {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img_icon {
+    position: absolute;
+    top: 45%;
+
+    img {
+        width: 100px;
+        background-color: transparent;
+    }
+}
+
+.btn_detail {
+    text-decoration: none;
+    background-color: $whiteColor;
+    color: #030304;
+    font-weight: $bolderFontWeight;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+// 0 - 480
+@include media(S) {
+    .box_details {
+        width: 80%;
+        height: 350px;
+        font-size: small;
+    }
+
+    .img_icon{
+        top: 40%;
+    }
+
+    .btn_detail {
+        width: 150px;
+        height: 30px;
+    }
+}
+
+// 480-768
+@include media(M) {
+    .box_details {
+        width: 80%;
+        height: 350px;
+        font-size: small;
+    }
+
+    .img_icon{
+        top: 40%;
+    }
+
+    .btn_detail {
+        width: 160px;
+        height: 35px;
+    }
+}
+
+// 768-950
+@include media(L) {
+    .box_details {
+        width: 80%;
+        height: 350px;
+        font-size: small;
+    }
+
+    .img_icon{
+        top: 40%;
+    }
+
+    .btn_detail {
+        width: 220px;
+        height: 40px;
+    }
+}
+
+// 950-1200
+@include media(XL) {
+    .box_details {
+        width: 80%;
+        height: 350px;
+        font-size: small;
+    }
+
+    .img_icon{
+        top: 40%;
+    }
+
+    .btn_detail {
+        width: 300px;
+        height: 40px;
+    }
+}

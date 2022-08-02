@@ -1,0 +1,36 @@
+@import './variable';
+@import './mixin';
+
+.listItem {
+    list-style: none;
+
+    a {
+        color: $whiteColor;
+        text-decoration: none;
+    }
+}
+
+.navbar {
+    top: 0;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    background: $blackColor;
+    opacity: 0.9;
+
+    ul {
+        padding: 0;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+}
+
+// 0 - 480
+@include media(S) {
+    .navbar ul {
+        font-size: small;
+    }
+}

@@ -1,0 +1,67 @@
+@import './variable';
+@import './mixin';
+
+.totalBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $whiteColor;
+}
+
+.detailBox {
+    width: 35%;
+}
+
+.contain {
+    border-bottom: 1px solid rgba(208, 208, 208, 0.456);
+
+    h4 {
+        font-weight: $lightFontWeight;
+    }
+
+    span {
+        font-weight: $lightFontWeight;
+    }
+
+    p {
+        font-weight: $boldFontWeight;
+    }
+}
+
+.partitions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.green {
+    color: $greenColor;
+    font-weight: $boldFontWeight;
+}
+
+.red {
+    color: $redColor;
+    font-weight: $boldFontWeight;
+}
+
+// 0 - 480
+@include media(S) {
+    .detailBox {
+        width: 70%;
+    }
+}
+
+// 480-768
+@include media(M) {
+    .detailBox {
+        width: 70%;
+    }
+}
+
+// 768-950
+@include media(L) {
+    .detailBox {
+        width: 50%;
+    }
+}

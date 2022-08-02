@@ -4,7 +4,7 @@ import React from 'react';
 import { usePagination, DOTS } from './usePagination';
 
 // Style
-import '../styles/pagination.css';
+import '../styles/scss/pagination.scss';
 
 function Pagination(props) {
 

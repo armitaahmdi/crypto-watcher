@@ -1,0 +1,8 @@
+@import './variable';
+
+.total-part {
+    color: $whiteColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

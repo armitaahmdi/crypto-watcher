@@ -6,7 +6,9 @@ import CoinInfo from './CoinInfo';
 const WhatchListData = (props) => {
 
     return (
-        <CoinInfo data={props.data} parents_component="watchList" />
+        <div className='container_show_coin_data'>
+            <CoinInfo data={props.data} parents_component="watchList" />
+        </div>
     );
 };
 

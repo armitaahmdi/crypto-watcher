@@ -18,7 +18,7 @@ import DataContextProvider from './contexts/DataContextProvider';
 import WatchListContextProvider from './contexts/WatchListContextProvider';
 
 // Style
-import './styles/App.css'
+import './styles/scss/app.scss'
 
 const App = () => {
   return (

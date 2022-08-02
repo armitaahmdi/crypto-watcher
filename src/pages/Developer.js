@@ -1,12 +1,12 @@
 import React from 'react';
 
 // Style
-import styles from '../styles/aboutProject.module.css'
+import '../styles/scss/aboutAndDeveloper.scss'
 
 const Developer = () => {
     return (
-        <section className={styles.container}>
-            <div className={styles.info}>
+        <section className='containerB'>
+            <div className='info'>
                 <h4>
                     Fullname:
                 </h4>
@@ -30,7 +30,10 @@ const Developer = () => {
                 <p>Sass</p>
                 <p>JavaScript</p>
                 <p>React</p>
+                <p>Rest API</p>
+                <p>Git</p>
                 <p>Familiar to TypeScript</p>
+                <p>Learning Node.js</p>
                 <p>Adobe Xd - Adobe Illustrator</p>
             </div>
         </section>

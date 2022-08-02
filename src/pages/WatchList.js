@@ -8,7 +8,7 @@ import WhatchListData from '../shared/WhatchListData';
 import { WatchListContext } from '../contexts/WatchListContextProvider';
 
 // Style
-import '../styles/WhatchList.css'
+import '../styles/scss/whatchList.scss'
 
 const WatchList = () => {
 
@@ -20,10 +20,10 @@ const WatchList = () => {
                 {state.selectedItems.map(item => <WhatchListData key={item.id} data={item} />)}
 
                 {
-                    state.itemsCounter === 0 && <div className='totall'>
+                    state.itemsCounter === 0 && <div className='total-part'>
                         <h2>Your Watchlist is Empty.</h2>
                         <Link to='/Spot-Market'>
-                        <button className='btn'>Add Coin</button>
+                        <button className='Button'>Add Coin</button>
                         </Link>
                     </div>
                 }
