@@ -114,6 +114,8 @@
 
     .Button {
         width: 60px;
+        display: flex;
+        justify-content: center;
     }
 
     .rightside span {
@@ -140,6 +142,8 @@
 
     .Button {
         width: 70px;
+        display: flex;
+        justify-content: center;
     }
 
     .rightside span {
@@ -166,6 +170,8 @@
     .Button {
         width: 90px;
         margin: 5px 10px;
+        display: flex;
+        justify-content: center;
     }
 
     .rightside span {
@@ -192,7 +198,8 @@
 
     .Button {
         width: 90px;
-        margin: 5px 10px;
+        margin: 5px 10px;display: flex;
+        justify-content: center;
     }
 
     .rightside span {
