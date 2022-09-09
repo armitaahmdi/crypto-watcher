@@ -1,6 +1,6 @@
 This is a React project bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 # Getting Started
-In the project directory, you can run:
+In the project directory, you can run :
 ```
 npm start
 or
